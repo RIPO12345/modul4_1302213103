@@ -29,21 +29,67 @@ class KodeBuah
     }
 }
 
+
+class PosisiKarakterGame
+{
+    private State currentState;
+
+    public PosisiKarakterGame()
+    {
+        currentState = new Berdiri();
+    }
+
+    public void SetState(State state)
+    {
+        currentState = state;
+        currentState.DisplayState();
+    }
+}
+
+interface State
+{
+    void DisplayState();
+}
+
+class Berdiri : State
+{
+    public void DisplayState()
+    {
+        Console.WriteLine("posisi standby");
+    }
+}
+
+class Tengkurap : State
+{
+    public void DisplayState()
+    {
+        Console.WriteLine("posisi istirahat");
+    }
+}
+
+
 class Program
 {
     static void Main(string[] args)
     {
-        KodeBuah kodepos = new KodeBuah();
+        KodeBuah kodebuah = new KodeBuah();
 
-        Console.WriteLine(kodepos.getKodeBuah("Apel")); 
-        Console.WriteLine(kodepos.getKodeBuah("Aprikot")); 
-        Console.WriteLine(kodepos.getKodeBuah("Alpukat")); 
-        Console.WriteLine(kodepos.getKodeBuah("Pisang")); 
-        Console.WriteLine(kodepos.getKodeBuah("Paprika")); 
-        Console.WriteLine(kodepos.getKodeBuah("Blackberry")); 
-        Console.WriteLine(kodepos.getKodeBuah("Ceri")); 
-        Console.WriteLine(kodepos.getKodeBuah("Kelapa")); 
-        Console.WriteLine(kodepos.getKodeBuah("Jagung"));  
-        Console.WriteLine(kodepos.getKodeBuah("Durian")); // Output: Kode buah tidak ditemukan.
+        Console.WriteLine(kodebuah.getKodeBuah("Apel")); 
+        Console.WriteLine(kodebuah.getKodeBuah("Aprikot")); 
+        Console.WriteLine(kodebuah.getKodeBuah("Alpukat")); 
+        Console.WriteLine(kodebuah.getKodeBuah("Pisang")); 
+        Console.WriteLine(kodebuah.getKodeBuah("Paprika")); 
+        Console.WriteLine(kodebuah.getKodeBuah("Blackberry")); 
+        Console.WriteLine(kodebuah.getKodeBuah("Ceri")); 
+        Console.WriteLine(kodebuah.getKodeBuah("Kelapa")); 
+        Console.WriteLine(kodebuah.getKodeBuah("Jagung"));  
+        Console.WriteLine(kodebuah.getKodeBuah("Durian")); // Output: Kode buah tidak ditemukan.
+        PosisiKarakterGame posisikaraktergame = new PosisiKarakterGame();
+
+        // Mengubah state menjadi Berdiri
+        posisikaraktergame.SetState(new Berdiri());
+
+        // Mengubah state menjadi Tengkurap
+        posisikaraktergame.SetState(new Tengkurap());
     }
 }

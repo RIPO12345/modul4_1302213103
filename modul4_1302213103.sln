@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "modul4_1302213103", "modul4_1302213103.csproj", "{5F46527B-74BF-45F3-8E49-019043956BEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PosisiKarakterGame", "..\PosisiKarakterGame\PosisiKarakterGame.csproj", "{54F05E11-F4FF-4E27-AC2D-C8E6276E7FCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5F46527B-74BF-45F3-8E49-019043956BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F46527B-74BF-45F3-8E49-019043956BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F46527B-74BF-45F3-8E49-019043956BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54F05E11-F4FF-4E27-AC2D-C8E6276E7FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F05E11-F4FF-4E27-AC2D-C8E6276E7FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F05E11-F4FF-4E27-AC2D-C8E6276E7FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F05E11-F4FF-4E27-AC2D-C8E6276E7FCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
